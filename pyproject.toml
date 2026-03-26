@@ -30,7 +30,8 @@ classifiers = [
 requires-python = ">=3.12"
 dependencies = [
     "uvicorn[standard]>=0.24.0",
-    "starlette>=0.32.0",
+    "starlette[full]>=0.32.0",
+    "itsdangerous>=2.1.0",
     "pydantic>=2.5.0",
     "SQLAlchemy[asyncio]>=2.0.0",
     "alembic>=1.13.0",

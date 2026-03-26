@@ -197,7 +197,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/veloxframework/velox.git
+git clone https://github.com/MUHAMMEDHAFEEZ/velox-framework.git
 cd velox
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
