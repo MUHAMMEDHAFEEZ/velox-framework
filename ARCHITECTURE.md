@@ -1,8 +1,8 @@
-# ANAL Framework Architecture
+# Velox Framework Architecture
 
 ## Framework Philosophy
 
-**ANAL** (Advanced Network Application Layer) is designed as a next-generation Python backend framework that combines the best aspects of Django's batteries-included approach, FastAPI's modern async design, and Laravel's elegant developer experience.
+**Velox** (Advanced Network Application Layer) is designed as a next-generation Python backend framework that combines the best aspects of Django's batteries-included approach, FastAPI's modern async design, and Laravel's elegant developer experience.
 
 ## Core Architectural Principles
 
@@ -52,31 +52,31 @@
 
 ## Core Components
 
-### Framework Core (`anal.core`)
+### Framework Core (`velox.core`)
 - Application container and dependency injection
 - Configuration management
 - Event system and hooks
 - Plugin loader and registry
 
-### HTTP Layer (`anal.http`)
+### HTTP Layer (`velox.http`)
 - ASGI/WSGI compatibility
 - Routing and middleware pipeline
 - Request/Response handling
 - WebSocket support
 
-### Database Layer (`anal.db`)
+### Database Layer (`velox.db`)
 - Database-agnostic ORM
 - Migration system
 - Connection pooling
 - Query optimization
 
-### Security Layer (`anal.security`)
+### Security Layer (`velox.security`)
 - Authentication and authorization
 - CSRF/XSS protection
 - Rate limiting
 - JWT/OAuth2 support
 
-### API Layer (`anal.api`)
+### API Layer (`velox.api`)
 - Auto-generated REST APIs
 - GraphQL support
 - OpenAPI/Swagger documentation

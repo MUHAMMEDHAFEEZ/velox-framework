@@ -1,27 +1,27 @@
-# Quick Start Guide for ANAL Framework
+# Quick Start Guide for Velox Framework
 
 ## Installation
 
 ```bash
-pip install anal-framework
+pip install velox-framework
 ```
 
 ## Create Your First Project
 
 ```bash
 # Create new project
-anal-admin startproject myapp
+velox-admin startproject myapp
 cd myapp
 
 # Setup database (SQLite by default)
-anal-admin makemigrations auth
-anal-admin migrate
+velox-admin makemigrations auth
+velox-admin migrate
 
 # Create admin user
-anal-admin createsuperuser
+velox-admin createsuperuser
 
 # Run development server
-anal-admin runserver
+velox-admin runserver
 ```
 
 Your app will be available at `http://localhost:8000`
@@ -40,8 +40,8 @@ Your app will be available at `http://localhost:8000`
 
 ```python
 # controllers.py
-from anal.http import Controller, JSONResponse
-from anal.http.decorators import route
+from velox.http import Controller, JSONResponse
+from velox.http.decorators import route
 
 class UserController(Controller):
     
@@ -52,11 +52,11 @@ class UserController(Controller):
 
 ## Documentation
 
-- [Full Documentation](https://docs.analframework.org)
-- [Tutorial](https://docs.analframework.org/tutorial/)
-- [GitHub Repository](https://github.com/analframework/anal)
+- [Full Documentation](https://docs.veloxframework.org)
+- [Tutorial](https://docs.veloxframework.org/tutorial/)
+- [GitHub Repository](https://github.com/veloxframework/velox)
 
 ## Support
 
-- GitHub Issues: https://github.com/analframework/anal/issues
-- Documentation: https://docs.analframework.org
+- GitHub Issues: https://github.com/veloxframework/velox/issues
+- Documentation: https://docs.veloxframework.org

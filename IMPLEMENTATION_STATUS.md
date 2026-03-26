@@ -1,26 +1,26 @@
-# ANAL Framework - Implementation Status
+# Velox Framework - Implementation Status
 
 ## Overview
 
-The ANAL Framework is now a comprehensive, production-ready Python backend framework with the following completed components:
+The Velox Framework is now a comprehensive, production-ready Python backend framework with the following completed components:
 
 ## ✅ Completed Components
 
-### 1. Core Framework (`anal/core/`)
-- **Application Container** (`application.py`): Main ANAL class with ASGI integration, dependency injection, event system
+### 1. Core Framework (`velox/core/`)
+- **Application Container** (`application.py`): Main Velox class with ASGI integration, dependency injection, event system
 - **Configuration System** (`config.py`): Pydantic-based settings with environment variable support
 - **Dependency Injection** (`container.py`): Advanced DI system with singleton/factory patterns and automatic resolution
 - **Event System** (`events.py`): Event bus for decoupled application components
 - **Exception Handling** (`exceptions.py`): Custom exception hierarchy for framework errors
 - **App Registry** (`registry.py`): Centralized app management and discovery
 
-### 2. HTTP Layer (`anal/http/`)
+### 2. HTTP Layer (`velox/http/`)
 - **Routing System** (`routing.py`): Advanced routing with path parameters, middleware support, WebSocket compatibility
 - **Controllers** (`controllers.py`): Base controller classes for Clean Architecture (Controller, APIController, ViewController, ResourceController)
 - **Responses** (`responses.py`): Comprehensive response types (JSON, Template, File, Redirect, etc.)
 - **Middleware System** (`middleware.py`): ASGI middleware framework with built-in middleware classes
 
-### 3. Database/ORM Layer (`anal/db/`)
+### 3. Database/ORM Layer (`velox/db/`)
 - **Models** (`models.py`): Complete model system with metaclass-based field processing and relationship support
 - **Fields** (`models.py`): Full field type library (CharField, IntegerField, DateTimeField, ForeignKey, etc.)
 - **Database Connection** (`connection.py`): Multi-backend database support (PostgreSQL, MySQL, SQLite) with async operations
@@ -28,14 +28,14 @@ The ANAL Framework is now a comprehensive, production-ready Python backend frame
 - **Managers & QuerySets** (`managers.py`): Django-style ORM with filtering, ordering, aggregation
 - **Migrations** (`migrations.py`): Complete migration system with operations and state tracking
 
-### 4. Authentication System (`anal/auth/`)
+### 4. Authentication System (`velox/auth/`)
 - **User Models** (`models.py`): Complete auth models (User, Group, Permission, Session, Token, PasswordResetToken)
 - **Authentication Backends** (`backends.py`): Multiple auth methods (username/password, token, session)
 - **Middleware** (`middleware.py`): Authentication, permission, CORS, rate limiting middleware
 - **Decorators** (`decorators.py`): View protection decorators (@login_required, @permission_required, etc.)
 - **User Management** (`__init__.py`): Convenience functions for user creation and management
 
-### 5. CLI System (`anal/cli/`)
+### 5. CLI System (`velox/cli/`)
 - **Main CLI** (`main.py`): Comprehensive command-line interface with 15+ commands
 - **Project Scaffolding** (`commands/startproject.py`): Complete project generation with proper structure
 - **App Creation** (`commands/startapp.py`): Django-style app creation with full file structure
@@ -53,28 +53,28 @@ The ANAL Framework is now a comprehensive, production-ready Python backend frame
 ### Developer Experience
 ```bash
 # Install framework
-pip install ANAL
+pip install Velox
 
 # Create new project
-anal-admin startproject myapp
+velox-admin startproject myapp
 cd myapp
 
 # Create auth tables
-anal-admin makemigrations auth
-anal-admin migrate
+velox-admin makemigrations auth
+velox-admin migrate
 
 # Create superuser
-anal-admin createsuperuser
+velox-admin createsuperuser
 
 # Start development server
-anal-admin runserver
+velox-admin runserver
 ```
 
 ### Code Examples
 
 #### 1. Model Definition
 ```python
-from anal.db import Model, fields
+from velox.db import Model, fields
 
 class User(Model):
     name = fields.CharField(max_length=100)
@@ -87,8 +87,8 @@ class User(Model):
 
 #### 2. API Controller
 ```python
-from anal.http import APIController, JsonResponse
-from anal.auth import login_required
+from velox.http import APIController, JsonResponse
+from velox.auth import login_required
 
 class UserController(APIController):
     
@@ -100,10 +100,10 @@ class UserController(APIController):
 
 #### 3. Application Setup
 ```python
-from anal.core import ANAL
-from anal.auth import AuthenticationMiddleware
+from velox.core import Velox
+from velox.auth import AuthenticationMiddleware
 
-app = ANAL(__name__)
+app = Velox(__name__)
 app.add_middleware(AuthenticationMiddleware)
 
 # Auto-discovery of routes, models, etc.
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 
 ## 📊 Feature Comparison
 
-| Feature | ANAL | Django | FastAPI | Laravel |
+| Feature | Velox | Django | FastAPI | Laravel |
 |---------|------|---------|---------|---------|
 | Async Support | ✅ Native | ⚠️ Limited | ✅ Native | ❌ |
 | Auto API Docs | ✅ | ❌ | ✅ | ❌ |
@@ -150,7 +150,7 @@ if __name__ == "__main__":
 ## 🏗️ Framework Architecture
 
 ```
-ANAL Framework
+Velox Framework
 ├── Core Layer
 │   ├── Application Container (DI, Events, Lifecycle)
 │   ├── Configuration Management
@@ -182,29 +182,29 @@ The framework is now ready for:
 3. **Production Deployment**: Security, performance, and scalability features
 4. **Community Development**: Clean codebase and plugin architecture
 
-The ANAL Framework successfully combines the best aspects of Django's completeness, FastAPI's modern async approach, and Laravel's developer experience into a unified, production-ready Python backend framework.
+The Velox Framework successfully combines the best aspects of Django's completeness, FastAPI's modern async approach, and Laravel's developer experience into a unified, production-ready Python backend framework.
 
 ## 🔧 Development Commands Summary
 
 ```bash
 # Project Management
-anal-admin startproject <name>    # Create new project
-anal-admin startapp <name>        # Create new app
+velox-admin startproject <name>    # Create new project
+velox-admin startapp <name>        # Create new app
 
 # Database Operations  
-anal-admin makemigrations [app]   # Create migrations
-anal-admin makemigrations auth    # Create auth tables
-anal-admin migrate                # Apply migrations
-anal-admin migrate-status         # Show migration status
+velox-admin makemigrations [app]   # Create migrations
+velox-admin makemigrations auth    # Create auth tables
+velox-admin migrate                # Apply migrations
+velox-admin migrate-status         # Show migration status
 
 # User Management
-anal-admin createsuperuser        # Create admin user
-anal-admin createuser <user>      # Create regular user
+velox-admin createsuperuser        # Create admin user
+velox-admin createuser <user>      # Create regular user
 
 # Development
-anal-admin runserver              # Start dev server
-anal-admin runserver --reload     # With auto-reload
-anal-admin runserver --debug      # Debug mode
+velox-admin runserver              # Start dev server
+velox-admin runserver --reload     # With auto-reload
+velox-admin runserver --debug      # Debug mode
 ```
 
 This represents a complete, professional-grade backend framework ready for real-world application development.

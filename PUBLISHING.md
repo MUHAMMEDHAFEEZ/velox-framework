@@ -27,7 +27,7 @@ python -m build
 twine upload --repository testpypi dist/*
 
 # Install from TestPyPI to test
-pip install --index-url https://test.pypi.org/simple/ ANAL
+pip install --index-url https://test.pypi.org/simple/ Velox
 ```
 
 ## Production Upload
@@ -96,12 +96,12 @@ version = "0.1.1"  # Increment this
 ## Install After Publishing
 
 ```bash
-pip install ANAL
+pip install Velox
 ```
 
 ## Verify Installation
 
 ```bash
-anal-admin version
-anal-admin startproject test_project
+velox-admin version
+velox-admin startproject test_project
 ```

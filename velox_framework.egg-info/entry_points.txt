@@ -1,0 +1,2 @@
+[console_scripts]
+velox-admin = velox.cli.__main__:main

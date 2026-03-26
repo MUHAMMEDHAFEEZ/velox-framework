@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2024-12-28
 
 ### Added
-- Initial release of ANAL Framework
+- Initial release of Velox Framework
 - Core application framework with ASGI support
 - HTTP layer with routing, controllers, and responses
 - Database layer with SQLAlchemy 2.0+ and migrations
@@ -26,13 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Database**: ORM with SQLAlchemy, migrations with Alembic, multi-database support
 - **Authentication**: User models, authentication backends, and security middleware
 - **CLI Tools**: 
-  - `anal-admin startproject` - Create new projects
-  - `anal-admin runserver` - Development server
-  - `anal-admin makemigrations` - Create database migrations
-  - `anal-admin migrate` - Apply migrations
-  - `anal-admin createsuperuser` - Create admin users
-  - `anal-admin shell` - Interactive Python shell
-  - `anal-admin version` - Version information
+  - `velox-admin startproject` - Create new projects
+  - `velox-admin runserver` - Development server
+  - `velox-admin makemigrations` - Create database migrations
+  - `velox-admin migrate` - Apply migrations
+  - `velox-admin createsuperuser` - Create admin users
+  - `velox-admin shell` - Interactive Python shell
+  - `velox-admin version` - Version information
 - **Default Configuration**: SQLite database for instant development setup
 
 ### Technical Details
@@ -54,4 +54,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - rich - Terminal formatting
 - And many more for full functionality
 
-[0.1.0]: https://github.com/analframework/anal/releases/tag/v0.1.0
+[0.1.0]: https://github.com/veloxframework/velox/releases/tag/v0.1.0

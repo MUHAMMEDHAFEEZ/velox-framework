@@ -1,5 +1,5 @@
 """
-Setup script for ANAL Framework.
+Setup script for Velox Framework.
 
 This file exists mainly for compatibility and development purposes.
 The actual package configuration is in pyproject.toml.

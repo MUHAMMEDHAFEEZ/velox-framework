@@ -3,16 +3,16 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "anal-framework"
+name = "velox-framework"
 version = "0.1.0"
-description = "Advanced Network Application Layer - A modern Python backend framework"
+description = "Velox Framework - A modern, high-performance Python backend framework"
 readme = "README.md"
 license = "MIT"
 authors = [
-    {name = "ANAL Framework Team", email = "team@analframework.org"},
+    {name = "Velox Framework Team", email = "team@veloxframework.org"},
 ]
 maintainers = [
-    {name = "ANAL Framework Team", email = "team@analframework.org"},
+    {name = "Velox Framework Team", email = "team@veloxframework.org"},
 ]
 keywords = ["web", "framework", "backend", "api", "async", "orm", "rest", "graphql"]
 classifiers = [
@@ -81,24 +81,24 @@ docs = [
 postgres = ["asyncpg>=0.29.0"]
 mysql = ["aiomysql>=0.2.0"]
 mongodb = ["motor>=3.3.0"]
-all = ["ANAL[dev,docs,postgres,mysql,mongodb]"]
+all = ["velox-framework[dev,docs,postgres,mysql,mongodb]"]
 
 [project.urls]
-Homepage = "https://github.com/analframework/anal"
-Documentation = "https://docs.analframework.org"
-Repository = "https://github.com/analframework/anal"
-"Bug Tracker" = "https://github.com/analframework/anal/issues"
-Changelog = "https://github.com/analframework/anal/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/veloxframework/velox"
+Documentation = "https://docs.veloxframework.org"
+Repository = "https://github.com/veloxframework/velox"
+"Bug Tracker" = "https://github.com/veloxframework/velox/issues"
+Changelog = "https://github.com/veloxframework/velox/blob/main/CHANGELOG.md"
 
 [project.scripts]
-anal-admin = "anal.cli.__main__:main"
+velox-admin = "velox.cli.__main__:main"
 
 [tool.setuptools]
 packages = {find = {}}
 include-package-data = true
 
 [tool.setuptools.package-data]
-anal = ["templates/**/*", "static/**/*", "migrations/**/*"]
+velox = ["templates/**/*", "static/**/*", "migrations/**/*"]
 
 [tool.black]
 line-length = 88
@@ -122,7 +122,7 @@ extend-exclude = '''
 profile = "black"
 multi_line_output = 3
 line_length = 88
-known_first_party = ["anal"]
+known_first_party = ["velox"]
 
 [tool.mypy]
 python_version = "3.12"
@@ -144,7 +144,7 @@ python_functions = ["test_*"]
 addopts = [
     "--strict-markers",
     "--strict-config",
-    "--cov=anal",
+    "--cov=velox",
     "--cov-report=term-missing",
     "--cov-report=html",
     "--cov-report=xml",
@@ -157,7 +157,7 @@ markers = [
 asyncio_mode = "auto"
 
 [tool.coverage.run]
-source = ["anal"]
+source = ["velox"]
 omit = [
     "*/tests/*",
     "*/test_*",

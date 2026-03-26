@@ -1,42 +1,42 @@
-# ANAL Framework
+# Velox Framework
 
-[![PyPI version](https://badge.fury.io/py/anal-framework.svg)](https://badge.fury.io/py/anal-framework)
+[![PyPI version](https://badge.fury.io/py/velox-framework.svg)](https://badge.fury.io/py/velox-framework)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/analframework/anal/workflows/Tests/badge.svg)](https://github.com/analframework/anal/actions)
-[![Coverage](https://codecov.io/gh/analframework/anal/branch/main/graph/badge.svg)](https://codecov.io/gh/analframework/anal)
+[![Tests](https://github.com/veloxframework/velox/workflows/Tests/badge.svg)](https://github.com/veloxframework/velox/actions)
+[![Coverage](https://codecov.io/gh/veloxframework/velox/branch/main/graph/badge.svg)](https://codecov.io/gh/veloxframework/velox)
 
-**ANAL** (Advanced Network Application Layer) is a modern, high-performance Python backend framework designed for building scalable web applications and APIs. It combines the best features of Django, FastAPI, and Laravel while maintaining clean architecture principles and async-first design.
+**Velox** (Advanced Network Application Layer) is a modern, high-performance Python backend framework designed for building scalable web applications and APIs. It combines the best features of Django, FastAPI, and Laravel while maintaining clean architecture principles and async-first design.
 
 ## ⚡ Quick Start
 
 ### Installation
 
 ```bash
-pip install anal-framework
+pip install velox-framework
 ```
 
 ### Create Your First Project
 
 ```bash
 # Create a new project
-anal-admin startproject myproject
+velox-admin startproject myproject
 cd myproject
 
 # Create your first app
-anal-admin startapp blog
+velox-admin startapp blog
 
 # Run development server
-anal-admin runserver
+velox-admin runserver
 ```
 
 ### Hello World Example
 
 ```python
-from anal import ANAL, Controller, route
-from anal.http import JsonResponse
+from velox import Velox, Controller, route
+from velox.http import JsonResponse
 
-app = ANAL()
+app = Velox()
 
 @app.route('/')
 async def hello_world(request):
@@ -100,14 +100,14 @@ if __name__ == '__main__':
 
 ## 📚 Documentation
 
-- **[Getting Started](https://docs.analframework.org/getting-started/)**
-- **[Tutorial](https://docs.analframework.org/tutorial/)**
-- **[API Reference](https://docs.analframework.org/api/)**
-- **[Best Practices](https://docs.analframework.org/best-practices/)**
+- **[Getting Started](https://docs.veloxframework.org/getting-started/)**
+- **[Tutorial](https://docs.veloxframework.org/tutorial/)**
+- **[API Reference](https://docs.veloxframework.org/api/)**
+- **[Best Practices](https://docs.veloxframework.org/best-practices/)**
 
 ## 🏛️ Architecture
 
-ANAL follows Clean Architecture principles with clear separation between layers:
+Velox follows Clean Architecture principles with clear separation between layers:
 
 ```
 ┌─────────────────────────────────────────┐
@@ -134,22 +134,22 @@ ANAL follows Clean Architecture principles with clear separation between layers:
 
 ```bash
 # Project management
-anal-admin startproject myproject
-anal-admin startapp myapp
+velox-admin startproject myproject
+velox-admin startapp myapp
 
 # Database operations
-anal-admin makemigrations
-anal-admin migrate
-anal-admin shell
+velox-admin makemigrations
+velox-admin migrate
+velox-admin shell
 
 # Development server
-anal-admin runserver --reload
-anal-admin runserver --workers 4
+velox-admin runserver --reload
+velox-admin runserver --workers 4
 
 # Testing and deployment
-anal-admin test
-anal-admin collectstatic
-anal-admin deploy
+velox-admin test
+velox-admin collectstatic
+velox-admin deploy
 ```
 
 ### Development Features
@@ -164,23 +164,23 @@ anal-admin deploy
 ## 🌐 Ecosystem
 
 ### Built-in Apps
-- **anal.auth** - Authentication and authorization
-- **anal.admin** - Auto-generated admin interface
-- **anal.api** - REST and GraphQL API generation
-- **anal.files** - File upload and management
-- **anal.cache** - Multi-level caching
-- **anal.tasks** - Background job processing
+- **velox.auth** - Authentication and authorization
+- **velox.admin** - Auto-generated admin interface
+- **velox.api** - REST and GraphQL API generation
+- **velox.files** - File upload and management
+- **velox.cache** - Multi-level caching
+- **velox.tasks** - Background job processing
 
 ### Third-party Packages
-- **anal-cms** - Content management system
-- **anal-ecommerce** - E-commerce functionality
-- **anal-analytics** - Analytics and monitoring
-- **anal-payments** - Payment processing
-- **anal-social** - Social authentication
+- **velox-cms** - Content management system
+- **velox-ecommerce** - E-commerce functionality
+- **velox-analytics** - Analytics and monitoring
+- **velox-payments** - Payment processing
+- **velox-social** - Social authentication
 
 ## 📈 Comparison
 
-| Feature | ANAL | Django | FastAPI | Laravel |
+| Feature | Velox | Django | FastAPI | Laravel |
 |---------|------|--------|---------|---------|
 | Async Support | ✅ Native | ⚠️ Partial | ✅ Native | ❌ No |
 | Performance | ⚡ Very High | 🔥 Medium | ⚡ Very High | 🔥 Medium |
@@ -197,8 +197,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/analframework/anal.git
-cd anal
+git clone https://github.com/veloxframework/velox.git
+cd velox
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e ".[dev]"
@@ -220,10 +220,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🎉 Community
 
 - **Discord**: [Join our community](https://discord.gg/analframework)
-- **GitHub Discussions**: [Ask questions and share ideas](https://github.com/analframework/anal/discussions)
+- **GitHub Discussions**: [Ask questions and share ideas](https://github.com/veloxframework/velox/discussions)
 - **Twitter**: [@ANALFramework](https://twitter.com/ANALFramework)
-- **Blog**: [Latest news and tutorials](https://blog.analframework.org)
+- **Blog**: [Latest news and tutorials](https://blog.veloxframework.org)
 
 ---
 
-**Made with ❤️ by the ANAL Framework Team**
+**Made with ❤️ by the Velox Framework Team**
